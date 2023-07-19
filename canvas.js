@@ -32,11 +32,18 @@ for (let i = 0; i < 5; i++) {
 }
 c.stroke(); //draws the line
 
-c.beginPath(); //to avoid connecting from previous line
-//c.arc(x, y, radius, startAngle, endAngle, clockwise?)
-//c.arc(x, y, radius, startAngle, endAngle, clockwise?)
-c.strokeStyle = 'red';
-c.stroke();
+//draw circle/arc
+
+for (let i = 0; i < 3; i++) {
+    c.beginPath(); //to avoid connecting from previous line
+    c.strokeStyle = getRandomColor(); //border
+    x = Math.random() * window.innerWidth;
+    y = Math.random() * window.innerHeight;
+    //c.arc(x, y, radius, startAngle, endAngle, clockwise?)
+    //c.arc(x, y, radius, startAngle, endAngle, clockwise?)
+    c.arc(x, y, 50, 0, Math.PI * 2, false);
+    c.stroke();
+}
 
 function getRandomColor() {
     let letters = '0123456789ABCDEF'.split('');
