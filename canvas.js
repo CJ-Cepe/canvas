@@ -21,10 +21,15 @@ for (let i = 0; i < 3; i++) {
 
 //draw lines
 c.beginPath(); //begins drawing
+x = Math.random() * window.innerWidth;
+y = Math.random() * window.innerHeight;
 c.moveTo(x, y); //start
-c.lineTo(x, y); //first point
-c.lineTo(x, y); //second point
-c.strokeStyle = 'cyan'; //set color
+for (let i = 0; i < 5; i++) {
+    x = Math.random() * window.innerWidth;
+    y = Math.random() * window.innerHeight;
+    c.lineTo(x, y); //first point
+    c.strokeStyle = getRandomColor(); //set color
+}
 c.stroke(); //draws the line
 
 c.beginPath(); //to avoid connecting from previous line
