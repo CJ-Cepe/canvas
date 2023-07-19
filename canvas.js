@@ -41,7 +41,7 @@ for (let i = 0; i < 3; i++) {
     y = Math.random() * window.innerHeight;
     //c.arc(x, y, radius, startAngle, endAngle, clockwise?)
     //c.arc(x, y, radius, startAngle, endAngle, clockwise?)
-    c.arc(x, y, 50, 0, Math.PI * 2, false);
+    c.arc(x, y, 50, 0, Math.PI * 2, false); //Math.pi * 2 --> produces circle
     c.stroke();
 }
 
